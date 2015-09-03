@@ -12,17 +12,17 @@ Create a function that:
 
 function solve(){
   return function (students) {
-  	_.chain(students).filter(function(item){
-  		return item.firstName < item.lastName;
+  	_.chain(students).filter(function(student){
+  		return student.firstName < student.lastName;
   	})
-  	.map(function(item){
-  		item.fullname = item.firstName + ' ' + item.lastName;
-  		return item;
+  	.map(function(student){
+  		student.fullname = student.firstName + ' ' + student.lastName;
+  		return student;
   	})
   	.sortBy('fullname')
   	.reverse()
-  	.each(function(item){
-  		console.log(item.fullname);
+  	.each(function(student){
+  		console.log(student.fullname);
   	});
   };
 }
