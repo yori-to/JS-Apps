@@ -22,7 +22,7 @@ function solve() {
 				return student;
 			})
 			.sortBy('avgMark')
-			.last
+			.last()
 			.tap(function(student){
 				console.log(student.fullname + ' has an average score of ' + student.avgMark);
 			});
